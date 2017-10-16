@@ -1,4 +1,4 @@
-# Install script for directory: /Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1
+# Install script for directory: /Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,5 +35,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

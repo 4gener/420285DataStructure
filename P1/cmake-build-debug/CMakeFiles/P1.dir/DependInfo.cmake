@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1/ExamineeInfo.cpp" "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1/cmake-build-debug/CMakeFiles/P1.dir/ExamineeInfo.cpp.o"
-  "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1/main.cpp" "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE/DataStructure/FinalTask/P1/cmake-build-debug/CMakeFiles/P1.dir/main.cpp.o"
+  "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1/ExamineeInfo.cpp" "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1/cmake-build-debug/CMakeFiles/P1.dir/ExamineeInfo.cpp.o"
+  "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1/main.cpp" "/Users/igulu/Documents/Programming/Schoolwork/TongjiSSE-Course-DataStructure/P1/cmake-build-debug/CMakeFiles/P1.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

@@ -9,7 +9,6 @@
 #include "LinkNode.h"
 
 int getExamineeNum();
-std::istream &operator>>(std::istream &is, Operation &operation);
 
 int main() {
     LinkList<ExamineeInfo> infoSystem;  // get input size
