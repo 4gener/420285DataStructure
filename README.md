@@ -1,2 +1,2 @@
 # TongjiSSE-Course-DataStructure
-course final task for data structure @SSE, Tongji Univ
+curriculum design for data structure @SSE, Tongji Univ *(course number: 42028502)*
