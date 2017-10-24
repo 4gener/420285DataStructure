@@ -65,6 +65,8 @@ public:
     void operate(Operation &operation);
 
     int size() { return _size; }
+
+    ~LinkList();
 };
 
 template<typename T>
@@ -191,6 +193,15 @@ void LinkList<T>::modify(int pos) {
         node->next = destPrev->next->next;
         delete (destPrev->next);
         destPrev->next = node;
+    }
+}
+
+template<typename T>
+LinkList<T>::~LinkList() {
+    while (head) {
+        auto temp = head;
+        head = head->next;
+        delete (temp);
     }
 }
 
