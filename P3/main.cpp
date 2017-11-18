@@ -68,6 +68,7 @@ void readMap(char map[][7]) {
         }
         is.ignore(1);
     }
+    is.close();
 }
 
 void printMap(char map[][7]) {

@@ -121,8 +121,8 @@ build
 .history
 
 # End of https://www.gitignore.io/api/c++,cmake,clion,visualstudiocode
-P1/.DS_Store
 *.xml
 *.iml
-P3/CMakeLists.txt
-P4/CMakeLists.txt
+
+*.DS_Store
+P5/test.txt
