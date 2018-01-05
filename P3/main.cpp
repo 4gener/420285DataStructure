@@ -15,8 +15,8 @@ int main() {
     bool isSolvable = false;
     std::stack<std::pair<int, int>> route;
 
-    std::cout << "The map info is contained in 'map.txt'" << std::endl
-              << "Press 1 to use this map, 0 to custom one: ";
+    std::cout << "地图信息存储在map.txt文件中" << std::endl
+              << "按1以使用该文件，按0为自定义：";
     std::cin >> toDefault;
 
     if (toDefault)
@@ -24,14 +24,14 @@ int main() {
     else
         customMap(map);
 
-    std::cout << "The map is:" << std::endl;
+    std::cout << "地图如下：" << std::endl;
     printMap(map);
 
     if (map[0][0] == '0')
         isSolvable = dfs(map, 0, 0, route, isSolvable);
 
     if (!isSolvable)
-        std::cout << "Sorry, this is a dead maze.";
+        std::cout << "对不起，这个迷宫无解。";
 
     return 0;
 }
@@ -88,7 +88,7 @@ void printMap(char map[][7]) {
 }
 
 void onSuccess(char map[][7]) {
-    std::cout << "The route is:" << std::endl;
+    std::cout << "路径是：" << std::endl;
     printMap(map);
 
     for (int i = 0; i < 7; i++) {
@@ -104,7 +104,7 @@ void onSuccess(char map[][7]) {
 }
 
 void customMap(char map[][7]) {
-    std::cout << "Please input a map of 7X7 using the format as follows:" << std::endl
+    std::cout << "请按照如下的格式输入一个7*7大小的迷宫：" << std::endl
               << "00#####\n"
               << "#0#000#\n"
               << "#0#0###\n"

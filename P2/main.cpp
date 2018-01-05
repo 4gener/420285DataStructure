@@ -3,19 +3,19 @@
 
 int main() {
     int M, N, S, K;
-    std::cout << "Please input the number of the tourists: ";
+    std::cout << "请输入游客数量：";
     std::cin >> N;
     while (1) {
-        std::cout << "Please input the starting position: ";
+        std::cout << "请输入起点位置：";
         std::cin >> S;
         if (S > N)
-            std::cout << "Invalid position.\n";
+            std::cout << "非法位置\n";
         else
             break;
     }
-    std::cout << "Please input the specified number of people are skipped: ";
+    std::cout << "请输入死亡数字M：";
     std::cin >> M;
-    std::cout << "Please input the specified number of people left: ";
+    std::cout << "请输入剩余的生者人数K：";
     std::cin >> K;
 
     auto circle = LoopLinkList<int>(N, S, M, K);

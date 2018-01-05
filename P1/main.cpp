@@ -26,22 +26,22 @@ int main() {
             break;
         }
         else if (operation == GENERATE) {
-            std::cout << "The system has " << infoSystem.size() << " examinee's information.\n";
+            std::cout << "系统总共有" << infoSystem.size() << "个考生的信息\n";
         }
         else
             infoSystem.operate(operation);
     }
 
-    std::cout << "See ya later!";
+    std::cout << "再会!";
 
 }
 
 int getExamineeNum() {
-    std::cout << "Welcome to the examinee info system.\n";
-    std::cout << "Please input the amount of the examinees: ";
+    std::cout << "欢迎来到考生信息系统\n";
+    std::cout << "请输入考生人数：";
     int num;
     while (std::cin >> num && num <= 0) {
-        std::cout << "Please input a valid number: ";
+        std::cout << "请输入一个大于零的整数: ";
     };
     return num;
 }

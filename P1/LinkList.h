@@ -15,7 +15,7 @@ enum Operation {
 std::istream &operator>>(std::istream &is, Operation &operation) {
     std::string operationStr;
     while (1) {
-        std::cout << "\nPlease choose your operation.\nCANCEL, INSERT, DELETE, FIND, MODIFY, or GENERATE\n";
+        std::cout << "\n请在下列操作中选择你想要的：\nCANCEL, INSERT, DELETE, FIND, MODIFY, or GENERATE\n";
         is >> operationStr;
         if (operationStr == "CANCEL") {
             operation = CANCEL;
@@ -42,7 +42,7 @@ std::istream &operator>>(std::istream &is, Operation &operation) {
             break;
         }
         else {
-            std::cout << "Invalid input.\n";
+            std::cout << "非法输入\n";
         }
     }
     return is;
@@ -82,7 +82,7 @@ void LinkList<T>::pushBack(T val) {
 
 template<typename T>
 void LinkList<T>::operate(Operation &operation) {
-    std::cout << "Please input the position which you want to operate on: ";
+    std::cout << "请输入你想操作的位置：";
     int pos;
     std::cin >> pos;
     switch (operation) {
@@ -106,7 +106,7 @@ void LinkList<T>::operate(Operation &operation) {
 template<typename T>
 void LinkList<T>::insert(int pos) {
     if (pos > _size + 1 || pos <= 0)
-        std::cout << "The position you input is invalid.\n";
+        std::cout << "操作位置非法\n";
     else {
         T val;
         std::cin >> val;
@@ -141,7 +141,7 @@ void LinkList<T>::insert(int pos) {
 template<typename T>
 void LinkList<T>::del(int pos) {
     if (pos > _size || pos <= 0)
-        std::cout << "The position you input is invalid.\n";
+        std::cout << "操作位置非法\n";
     else {
         if (pos == 1) {
             if (_size == 1)
@@ -168,7 +168,7 @@ void LinkList<T>::del(int pos) {
 template<typename T>
 void LinkList<T>::find(int pos) {
     if (pos > _size || pos <= 0)
-        std::cout << "The position you input is invalid.\n";
+        std::cout << "操作位置非法\n";
     else {
         auto dest = head;
         for (int i = 1; i < pos; i++) {
@@ -181,7 +181,7 @@ void LinkList<T>::find(int pos) {
 template<typename T>
 void LinkList<T>::modify(int pos) {
     if (pos > _size || pos <= 0)
-        std::cout << "The position you input is invalid.\n";
+        std::cout << "操作位置非法\n";
     else {
         auto destPrev = head;
         for (int i = 1; i < pos - 1; i++) {

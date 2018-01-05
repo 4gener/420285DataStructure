@@ -44,7 +44,7 @@ void BSTree::insert(int val) {
                 current = current->right;
             }
             else if (current->value == val) {
-                std::cout << "The number " << val << " already exists." << std::endl;
+                std::cout << "数字" << val << "已经存在" << std::endl;
                 return;
             }
         }
@@ -78,12 +78,12 @@ void BSTree::search(int val) {
                 current = current->right;
             }
             else if (current->value == val) {
-                std::cout << "The number " << val << " already exists." << std::endl;
+                std::cout << "数字" << val << "已经存在" << std::endl;
                 return;
             }
         }
         else {
-            std::cout << "The number " << val << " doesn't exist." << std::endl;
+            std::cout << "数字" << val << "不存在" << std::endl;
             return;
         }
     }
@@ -103,20 +103,20 @@ void BSTree::display(TreeNode *treeNode) {
 
 int main() {
     BSTree bsTree;
-    std::cout << "Binary Sort Tree" << std::endl
-              << "1 --- create" << std::endl
-              << "2 --- insert" << std::endl
-              << "3 --- search" << std::endl
-              << "4 --- exit" << std::endl << std::endl;
+    std::cout << "二叉排序树来啦～" << std::endl
+              << "1 --- 创建" << std::endl
+              << "2 --- 插入" << std::endl
+              << "3 --- 搜索" << std::endl
+              << "4 --- 退出" << std::endl;
 
     while (1) {
         int operation;
-        std::cout << std::endl << "Please select: ";
+        std::cout << std::endl << "请选择：";
         std::cin >> operation;
 
         switch (operation) {
             case 1:
-                std::cout << "Please input the list of numbers, 0 to stop:" << std::endl;
+                std::cout << "请输入所有的数字，0代表停止：" << std::endl;
                 while (1) {
                     int num;
                     std::cin >> num;
@@ -130,21 +130,23 @@ int main() {
 
             case 2:
                 int insert;
-                std::cout << "Please input the number to insert: ";
+                std::cout << "请输入要插入的数字：";
                 std::cin >> insert;
                 bsTree.insert(insert);
                 break;
 
             case 3:
-                std::cout << "Please input the number to search: ";
+                std::cout << "请输入要查找的数字：";
                 int search;
                 std::cin >> search;
                 bsTree.search(search);
                 break;
 
             case 4:
-                std::cout << "Bye" << std::endl;
+                std::cout << "再会！" << std::endl;
                 return 0;
+            default:
+                std::cout << "请输入一个正确的选择！";
         }
     }
 }

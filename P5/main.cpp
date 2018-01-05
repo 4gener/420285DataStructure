@@ -27,15 +27,15 @@ void readFile(std::ifstream &infile, std::map<std::string, std::vector<std::pair
 void printCount(std::map<std::string, std::vector<std::pair<int, int> >> &infoMap) {
     for (auto &word:infoMap) {
         std::cout << std::endl
-                  << "The word \"" << word.first << "\" appeared for " << word.second.size() << " times." << std::endl
-                  << "The locations are:" << std::endl;
+                  << "单词\"" << word.first << "\"出现了" << word.second.size() << "次" << std::endl
+                  << "位置是：" << std::endl;
 
         int rowNum = 1;
         std::vector<int> colNumAll;
 
         for (auto &pos:word.second) {
             if (rowNum != pos.first && colNumAll.size() != 0) {
-                std::cout << colNumAll.size() << " times for row No." << rowNum << ": ";
+                std::cout << colNumAll.size() << "次在第" << rowNum << "排: ";
                 for (auto &colNum:colNumAll) {
                     std::cout << colNum << " ";
                 }
@@ -46,7 +46,7 @@ void printCount(std::map<std::string, std::vector<std::pair<int, int> >> &infoMa
             colNumAll.push_back(pos.second);
         }
 
-        std::cout << colNumAll.size() << " times for row No." << rowNum << ": ";
+        std::cout << colNumAll.size() << "次在第" << rowNum << "排: ";
         for (auto &colNum:colNumAll) {
             std::cout << colNum << " ";
         }
@@ -56,7 +56,7 @@ void printCount(std::map<std::string, std::vector<std::pair<int, int> >> &infoMa
 }
 
 int main() {
-    std::cout << "Please input the file's name (\".txt\" excluded): ";
+    std::cout << "请输入文件名(\".txt\" 排除在外): ";
     std::string fileName;
     std::cin >> fileName;
     std::map<std::string, std::vector<std::pair<int, int> >> infoMap;

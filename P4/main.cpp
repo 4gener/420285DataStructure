@@ -19,7 +19,7 @@ public:
 int main() {
 
     int n;
-    std::cout << "Please input the amount of Queens: ";
+    std::cout << "请输入皇后的数量：";
     std::cin >> n;
     std::cout << std::endl;
 
@@ -94,10 +94,10 @@ QueensTable::QueensTable(int n) {
 QueensTable::~QueensTable() {
     delete[](_table);
     if (_answerNum) {
-        std::cout << _answerNum << " answers in total";
+        std::cout << _answerNum << "个答案";
     }
     else {
-        std::cout << "No valid answers";
+        std::cout << "该情况下无解";
     }
 }
 

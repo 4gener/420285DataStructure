@@ -34,7 +34,7 @@ void LoopLinkList<T>::eliminateByGap() {
                 last = current;
             current = current->next;
         }
-        std::cout << "The tourist killed in the No." << i << " place is: " << *(current->getValue())
+        std::cout << "第" << i << "个死者的位置是" << *(current->getValue())
                   << std::endl;
         auto temp = current;
         current = current->next;
@@ -66,7 +66,7 @@ LoopLinkList<T>::LoopLinkList(int size, int startPos, int gap, int numLeft):
 
 template<typename T>
 LoopLinkList<T>::~LoopLinkList() {
-    std::cout << "The survivors are: ";
+    std::cout << "幸存者分别是：";
     for (int i = 1; i <= _numLeft; i++) {
         auto temp = head;
         head = head->next;
