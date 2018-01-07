@@ -1,2 +1,2 @@
-# TongjiSSE-Course-DataStructure
-curriculum design for data structure @SSE, Tongji Univ *(course number: 42028502)*
+# 42028502DataStructure
+assignments for course 42028502 Data Structure @SSE, Tongji Univ
