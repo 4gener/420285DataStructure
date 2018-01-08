@@ -183,16 +183,26 @@ void LinkList<T>::modify(int pos) {
     if (pos > _size || pos <= 0)
         std::cout << "操作位置非法\n";
     else {
-        auto destPrev = head;
-        for (int i = 1; i < pos - 1; i++) {
-            destPrev = destPrev->next;
+        if (pos == 1) {
+            T val;
+            std::cin >> val;
+            auto node = new LinkNode<T>(val);
+            node->next = head->next;
+            delete (head);
+            head = node;
         }
-        T val;
-        std::cin >> val;
-        auto node = new LinkNode<T>(val);
-        node->next = destPrev->next->next;
-        delete (destPrev->next);
-        destPrev->next = node;
+        else {
+            auto destPrev = head;
+            for (int i = 1; i < pos - 1; i++) {
+                destPrev = destPrev->next;
+            }
+            T val;
+            std::cin >> val;
+            auto node = new LinkNode<T>(val);
+            node->next = destPrev->next->next;
+            delete (destPrev->next);
+            destPrev->next = node;
+        }
     }
 }
 
