@@ -120,7 +120,6 @@ void quickSort(int low, int high, std::vector<int> &nums) {
 }
 
 void triggerQuickSort(std::vector<int> nums) {
-    count++;
     quickSort(0, nums.size() - 1, nums);
 }
 

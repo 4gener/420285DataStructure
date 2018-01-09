@@ -66,7 +66,7 @@ LoopLinkList<T>::LoopLinkList(int size, int startPos, int gap, int numLeft):
 
 template<typename T>
 LoopLinkList<T>::~LoopLinkList() {
-    std::cout << "幸存者分别是：";
+    std::cout << std::endl << "幸存者分别是：";
     for (int i = 1; i <= _numLeft; i++) {
         auto temp = head;
         head = head->next;

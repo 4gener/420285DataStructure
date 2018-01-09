@@ -17,6 +17,7 @@ int main() {
     std::cin >> M;
     std::cout << "请输入剩余的生者人数K：";
     std::cin >> K;
+    std::cout << std::endl;
 
     auto circle = LoopLinkList<int>(N, S, M, K);
     circle.eliminateByGap();
