@@ -133,6 +133,7 @@ int main() {
                 std::cout << "请输入要插入的数字：";
                 std::cin >> insert;
                 bsTree.insert(insert);
+                bsTree.display();
                 break;
 
             case 3:

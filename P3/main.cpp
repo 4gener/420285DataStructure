@@ -72,7 +72,7 @@ void readMap(char map[][7]) {
 }
 
 void printMap(char map[][7]) {
-    std::cout << ' ';
+    std::cout << std::endl << ' ';
     for (int i = 0; i < 7; i++) {
         std::cout << '\t' << i;
     }
@@ -88,7 +88,7 @@ void printMap(char map[][7]) {
 }
 
 void onSuccess(char map[][7]) {
-    std::cout << "路径是：" << std::endl;
+    std::cout << std::endl << "路径是：" << std::endl;
     printMap(map);
 
     for (int i = 0; i < 7; i++) {
